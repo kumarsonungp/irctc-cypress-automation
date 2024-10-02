@@ -67,7 +67,7 @@ function performLogin(LOGGED_IN) {
                                 // api call to retrieve captcha value
 
                                 cy.exec(
-                                    `py irctc-captcha-solver/app.py "${value}"`
+                                    `python irctc-captcha-solver/app.py "${value}"`
                                 ).then((result) => {
                                     cy.get("#captcha")
                                         .clear()
